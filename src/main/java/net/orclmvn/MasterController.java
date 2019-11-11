@@ -28,6 +28,7 @@ public class MasterController {
 	@Autowired
 	private UserService userService;
 	
+	
 
 	@RequestMapping("/")
 	public String usermain(Model model) {
@@ -36,6 +37,10 @@ public class MasterController {
 		return "user";
 	}
 	
+	
+
+	
+//  DIBAWAH INI ADALAH CONTROLLER MAPPING UNTUK DATABASE MEMBER	
 	@RequestMapping("/user")
 	public String user(Model model) {
 		List<User> listUsers = userService.listAll();
@@ -43,6 +48,23 @@ public class MasterController {
 		return "user";
 	}
 	
+	@RequestMapping(value = "userformadd", method = RequestMethod.GET)
+	public String assetform(ModelMap model) {
+		User user = new User();
+		model.addAttribute("user", user);
+		return "userformadd";
+	}
+	
+	
+	@RequestMapping(value = "saveuser", method = RequestMethod.POST)
+	public String SaveMember(@Valid User user, BindingResult result, 
+			ModelMap model, RedirectAttributes redirectattributes) {
+		if (result.hasErrors()) {
+			return "userformadd";
+		}
+		userService.save(user);
+		return "redirect:/user";
+	}
 	
 	 @RequestMapping("/delete/{id}")
 	    public String deleteCsr(@PathVariable(name = "id") int id) {
@@ -52,28 +74,60 @@ public class MasterController {
 	
     @RequestMapping("/userformadd")
     public String showNewcsrPage(Model model) {
-        User TBL_USER_JAVA = new User();
-        model.addAttribute("TBL_USER_JAVA", TBL_USER_JAVA );
+        User TBL_MEMBER = new User();
+        model.addAttribute("TBL_MEMBER", TBL_MEMBER );
          
         return "userformadd";
     }
     
+       
     @RequestMapping("/userformupdate")
     public String updateNewcsrPage(Model model) {
-        User TBL_USER_JAVA = new User();
-        model.addAttribute("TBL_USER_JAVA", TBL_USER_JAVA );
+        User TBL_MEMBER = new User();
+        model.addAttribute("TBL_MEMBER", TBL_MEMBER );
          
         return "userformupdate";
     }
 	
     @RequestMapping(value = "/update", method = RequestMethod.GET)
-    public String updatecsr(@ModelAttribute("TBL_USER_JAVA") User TBL_USER_JAVA) {
-        userService.save(TBL_USER_JAVA);
+    public String update(@ModelAttribute("TBL_MEMBER") User TBL_MEMBER) {
+        userService.save(TBL_MEMBER);
          
         return "/";
         
     }
-	
+    
+  //DI BAWAH INI ADALAH SETING UNTUK ASSET SERVICE
+  	@Autowired
+  	private AssetService assetService;
+  	
+//    DIBAWAH INI ADALAH CONTROLLER MAPPING UNTUK DATABASE ASSET
+    
+	@RequestMapping("/asset")
+	public String asset(Model model) {
+		List<Asset> listAsset = assetService.listAll();
+		model.addAttribute("listAsset", listAsset);
+		return "asset";
+}
+	@RequestMapping(value = "saveasset", method = RequestMethod.POST)
+	public String SaveMember(@Valid Asset asset, BindingResult result, 
+			ModelMap model, RedirectAttributes redirectattributes) {
+		if (result.hasErrors()) {
+			return "assetformadd";
+		}
+		assetService.save(asset);
+		return "redirect:/asset";
+	}
+
+    @RequestMapping("/assetformadd")
+    public String showassetformadd(Model model) {
+        User TBL_MEMBER = new User();
+        model.addAttribute("TBL_MEMBER", TBL_MEMBER );
+         
+        return "assetformadd";
+    }
+    
+    
 
 	@ModelAttribute("brands")
 	public List<String> initializeSections() {

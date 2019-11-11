@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Java Training | Dashboard</title>
+  <title>PT. MANDIRI UTAMA FINANCE | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,16 +44,17 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-green-light sidebar-mini">
+<body class="hold-transition skin-blue-light sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>J</b>T</span>
+      <span class="logo-mini"><b>M</b>UF</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Java</b>Training</span>
+<!--<span class="logo-lg"><b>MANDIRI</b>UTAMA FINANCE</span> -->
+      <img src="${pageContext.request.contextPath }/resources/dist/img/logomandiri2.jpg" weight="50" height="50">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -67,17 +68,17 @@
 
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="${pageContext.request.contextPath }/resources/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <img src="${pageContext.request.contextPath }/resources/dist/img/FOTO.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Aditia Rizki</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="${pageContext.request.contextPath }/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="${pageContext.request.contextPath }/resources/dist/img/FOTO.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Aditia Rizki - Web Developer
+                  <small>Programmer Team Of PT. Mandiri Utama Finance</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -135,7 +136,8 @@
 <%--         <li><a href="${pageContext.request.contextPath }/admin/master/product"><i class="fa fa-circle-o"></i> Product</a></li> --%>
 <%--          <li><a href="${pageContext.request.contextPath }/admin/master/user"><i class="fa fa-circle-o"></i> User</a></li> --%>
         
-        <li><a href="${pageContext.request.contextPath }/user"><i class="fa fa-user-o "></i> User</a></li>
+        <li><a href="${pageContext.request.contextPath }/user"><i class="fa fa-user-o "></i> Member</a></li>
+         <li><a href="${pageContext.request.contextPath }/asset"><i class="fa fa-user-o "></i> Asset</a></li>
         
 <!--         <li class="treeview"> -->
 <!--           <a href="#"> -->
@@ -309,7 +311,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.18
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2019 <a href="https://www.muf.co.id/">PT.MANDIRI UTAMA FINANCE</a>.</strong> All rights
     reserved.
   </footer>
 

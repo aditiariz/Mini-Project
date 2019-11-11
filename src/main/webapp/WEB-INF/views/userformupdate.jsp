@@ -14,22 +14,22 @@
  <div align="left">
         <h1>Edit Data</h1>
         <br />
-        <form action="#" th:action="@{/update}" th:object="${TBL_USER_JAVA}"
+        <form action="#" th:action="@{/update}" th:object="${TBL_MEMBER}"
             method="post">
             
     <div class="form-group">
       <label for="email">ID:</label>
-      <input type="text" class="form-control" th:field="*{id}" id="id"  placeholder="Read Only" name="id" readonly="readonly">
+      <input type="text" class="form-control" th:field="*{memberid}" id="id"  placeholder="Read Only" name="id" readonly="readonly">
     </div> 
     
     <div class="form-group">
       <label for="pwd">Nama Member:</label>
-      <input type="text" class="form-control" th:field="*{name}" id="nama" placeholder="Masukan Nama Member" name="nama">
+      <input type="text" class="form-control" th:field="*{membername}" id="membername" placeholder="Masukan Nama Member" name="membername">
     </div>
     
      <div class="form-group">
-      <label for="pwd">Email:</label>
-      <input type="text" class="form-control" th:field="*{email}" id="email" placeholder="Masukan Email" name="nama">
+      <label for="pwd">DOB:</label>
+      <input type="date" class="form-control" th:field="*{dob}" id="dob" placeholder="Masukan Email" name="dob">
     </div>
     
       <button type="submit" class="btn btn-default">Save</button>

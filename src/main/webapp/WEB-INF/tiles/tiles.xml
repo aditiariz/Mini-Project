@@ -21,4 +21,12 @@
 		<put-attribute name="content" value="/WEB-INF/views/userformadd.jsp"></put-attribute>
 	</definition>
 	
+	<definition name="asset" extends="mytemplate">
+		<put-attribute name="content" value="/WEB-INF/views/asset.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="assetformadd" extends="mytemplate">
+		<put-attribute name="content" value="/WEB-INF/views/assetformadd.jsp"></put-attribute>
+	</definition>
+	
 </tiles-definitions>

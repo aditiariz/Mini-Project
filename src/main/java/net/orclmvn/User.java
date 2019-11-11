@@ -1,6 +1,8 @@
 package net.orclmvn;
 
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,39 +10,43 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name= "TBL_USER_JAVA")
+@Table(name= "TBL_MEMBER")
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    private Integer memberid;
 
-    private String name;
+    private String membername;
 
-    private String email;
+    private Date dob;
 
-	public Integer getId() {
-		return id;
+	public Integer getMemberid() {
+		return memberid;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setMemberid(Integer memberid) {
+		this.memberid = memberid;
 	}
 
-	public String getName() {
-		return name;
+	public String getMembername() {
+		return membername;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setMembername(String membername) {
+		this.membername = membername;
 	}
 
-	public String getEmail() {
-		return email;
+
+	public Date getDob() {
+		return dob;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
+
+	
+	
 
 
 }

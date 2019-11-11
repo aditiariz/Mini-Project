@@ -47,7 +47,7 @@ body {
   position: relative;
 }
 .layout-boxed {
-  background-color: #f9fafc;
+  background-color: #c3e4f5;
 }
 /*
  * Content Wrapper - contains the main content
@@ -907,7 +907,7 @@ a:focus {
 }
 .control-sidebar-light,
 .control-sidebar-light + .control-sidebar-bg {
-  background: #f9fafc;
+  background: #c3e4f5;
   border-left: 1px solid #d2d6de;
 }
 .control-sidebar-light .nav-tabs.control-sidebar-tabs {
@@ -932,7 +932,7 @@ a:focus {
 .control-sidebar-light .nav-tabs.control-sidebar-tabs > li.active > a:hover,
 .control-sidebar-light .nav-tabs.control-sidebar-tabs > li.active > a:focus,
 .control-sidebar-light .nav-tabs.control-sidebar-tabs > li.active > a:active {
-  background: #f9fafc;
+  background: #c3e4f5;
   color: #111;
 }
 .control-sidebar-light .control-sidebar-heading,

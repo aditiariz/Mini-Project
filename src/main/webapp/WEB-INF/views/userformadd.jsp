@@ -11,23 +11,22 @@
 </head>
 <body>
     <div align="left">
-        <h1>Tambah User</h1>
+        <h1>Tambah Member</h1>
         <br />
-        <form action="save" th:action="@{/update}" th:object="${TBL_USER_JAVA}"
-            method="post">
+        <form action="saveuser" th:action="@{/saveuser}" th:object="${TBL_MEMBER}" method="POST">
             
     <div class="form-group">
-      <label for="email">ID:</label>
-      <input type="text" class="form-control" th:field="*{id}" id="id"  placeholder="Read Only" name="id" readonly="readonly">
+      <label for="email">Member ID:</label>
+      <input type="text" class="form-control" th:field="*{memberid}" id="memberid"  placeholder="Read Only" name="memberid" readonly="readonly">
     </div> 
     
     <div class="form-group">
       <label for="pwd">Nama Member:</label>
-      <input type="text" class="form-control" th:field="*{name}" id="nama" placeholder="Masukan Nama Member" name="nama">
+      <input type="text" class="form-control" th:field="*{membername}" id="membername" placeholder="Masukan Nama Member" name="membername">
     </div>
    <div class="form-group">
-      <label for="pwd">Email:</label>
-      <input type="text" class="form-control" th:field="*{email}" id="email" placeholder="Masukan Email" name="email">
+      <label for="pwd">DOB:</label>
+      <input type="date" class="form-control" th:field="*{dob}" id="dob" placeholder="Masukan DOB" name="dob">
     </div>
    
     <button type="submit" class="btn btn-default">Save</button>
